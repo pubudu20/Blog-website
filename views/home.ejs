@@ -3,12 +3,12 @@
 <h1>Home</h1>
 
 <p>
-  <%= starttingContent -%>
+  <%= starttingContent %>
 </p>
 
-<%- include('partials/footer'); -%>
-
-
 <% posts.forEach(function(post){ %>
-<%  console.log(post.title); %>
+  <h1> <%= post.title %></h1>
+  <p> <%= post.content %></p>
 <%});%>
+
+<%- include('partials/footer'); -%>

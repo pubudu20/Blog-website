@@ -48,13 +48,14 @@ app.get('/posts/:postName',function(req,res){
     const storedTitle = _.lowerCase(post.title);
     if( storedTitle === requsetedTitle){
       console.log("Match Found");
-    }else{
-      console.log("No Match");
+
+      res.render("post",{
+        postTitle: post.title , postContent: post.content});
     }
   });
 
 
-})
+});
 
 
 
